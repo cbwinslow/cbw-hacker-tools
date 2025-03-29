@@ -1,0 +1,24 @@
+ name: Validate cbw-hacker-tools
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Check YAML files
+        uses: ibiqlik/action-yamllint@v3
+
+      - name: ShellCheck
+        uses: ludeeus/action-shellcheck@master
+
+      - name: Ansible Lint
+        uses: ansible/ansible-lint-action@v6
+

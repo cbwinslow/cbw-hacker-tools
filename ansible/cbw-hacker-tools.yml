@@ -1,0 +1,8 @@
+---
+- name: Install CBW Hacker Tools
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Detect OS type
+      ansible.builtin.include_tasks: "tasks/{{ ansible_os_family | lower }}.yml"
+

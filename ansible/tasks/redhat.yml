@@ -1,0 +1,14 @@
+- name: Install packages on Red Hat-based systems
+  dnf:
+    name:
+      - curl
+      - wget
+      - git
+      - btop
+      - nmap
+      - gobuster
+      - tmux
+      - neovim
+      - docker
+    state: present
+

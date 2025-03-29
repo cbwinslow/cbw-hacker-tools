@@ -1,0 +1,15 @@
+- name: Install packages on Arch-based systems
+  pacman:
+    name:
+      - curl
+      - wget
+      - git
+      - btop
+      - nmap
+      - gobuster
+      - tmux
+      - neovim
+      - docker
+    state: present
+    update_cache: true
+

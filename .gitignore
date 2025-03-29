@@ -1,0 +1,12 @@
+ *.swp
+*.log
+*.tmp
+*.bak
+__pycache__/
+.env
+node_modules/
+dist/
+build/
+.venv/
+.DS_Store
+
